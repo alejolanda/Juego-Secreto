@@ -1,0 +1,276 @@
+/*:root {
+  --primary: #1875E8;
+  --secondary: #041832;
+  --light: #FFFFFF;
+  --dark: #343A40;
+  --disabled: #898989;
+  --gradient: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--gradient);
+  color: var(--light);
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 300%;
+  max-width: 1200px;
+  background: url("img/Ruido.png") center/cover;
+  border: 1px solid var(--primary);
+  border-radius: 33px;
+  box-shadow: 0 4px 20px rgba(1, 8, 14, 0.15);
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.container__contenido {
+  display: flex;
+  gap: 2rem;
+}
+
+.container__informaciones {
+  flex: 1;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.texto__parrafo {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.container__input {
+  width: 50%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 16px;
+  border: none;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.container__botones {
+  display: flex;
+  gap: 1rem;
+}
+
+.container__boton {
+  flex: 01;
+  padding: 1rem;
+  border-radius: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1.1rem;
+}
+
+#intentar {
+  background: var(--primary);
+  color: white;
+  border: none;
+}
+
+#intentar:disabled {
+  background: transparent;
+  color: var(--disabled);
+  cursor: not-allowed;
+}
+
+#reiniciar {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+#reiniciar:not(:disabled):hover {
+  background: var(--primary);
+  color: white;
+}
+
+.imagen-personaje {
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
+  height: 220px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  .container__contenido {
+    flex-direction: column;
+  }
+  
+  .imagen-personaje {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    height: 180px;
+    margin: 1rem auto 0;
+    display: block;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+}*/
+
+/*codigo original para un juego de adivinanza de números secretos*/
+
+:root {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.container {
+    width: 1200px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(115, 72, 215, 0.934);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.container__contenido {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.container__informaciones {
+    flex: 1;
+    padding: 2rem;
+}
+
+.container__boton {
+    border-radius: 16px;
+    background: #1875E8;
+    padding: 16px 24px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    margin-top: 2rem;
+}
+
+.container__boton:disabled {
+    background: transparent;
+}
+
+.container__texto {
+    margin: 16px 0 16px 0;
+}
+
+.container__texto-azul {
+    color: #1875E8;
+}
+
+.container__input {
+    width: 100%;
+    height: 72px;
+    border-radius: 16px;
+    background-color: #FFF;
+    border: none;
+    color: #1875E8;
+    padding: 2rem;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+.container__botones {
+    display: flex;
+    gap: 2em;
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 60px;
+    padding-bottom: 2rem;
+    -webkit-text-stroke: 0.5px rgba(247, 227, 10, 0.99);
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000000,
+       1px 1px 0 #000;
+}
+
+p,
+button {
+    font-family: 'Inter', sans-serif;
+    -webkit-text-stroke: 0.1px black;
+     color: rgba(234, 222, 222, 0.807);
+     text-shadow:
+       0.5px 0.5px 0 #000,
+     -0.5px -0.5px 0 #000,  
+      0.5px -0.5px 0 #000,
+      -0.5px 0.5px 0 #000,
+       0.5px 0.5px 0 #000;
+    
+}
+
+.texto__parrafo {
+    font-size: 32px;
+    font-weight: 400;
+    -webkit-text-stroke: 1px black;
+     color: white;
+     text-shadow:
+       1px 1px 0 #000,
+     -0.5px -0.5px 0 #000,  
+      0.5px -0.5px 0 #000,
+      -0.5px 0.5px 0 #000,
+       0.5px 0.5px 0 #000;
+}
