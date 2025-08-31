@@ -253,7 +253,6 @@ document.getElementById('valorUsuario').addEventListener('input', function(e) {
 
 condicionesIniciales();
 
-
 // Código para un juego de adivinanza de números secretos Original
 
 /*let numeroSecreto = 0;
